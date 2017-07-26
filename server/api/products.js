@@ -26,18 +26,6 @@ router.get('/:categoryId/itemId', (req, res, next) => {
         .catch(next)
 })
 
-router.get('/:itemId', (req, res, next) => {
-    const itemId = req.params.itemId;
-
-    Product.findAll({
-        where: {
-            id: itemId //some ID that matches succulents
-        }
-    })
-        .then(item => res.json(item))
-        .catch(next)
-})
-
 router.post('/:categoryId', (req, res, next) => {
     Product.create(req.body)
         .then(product => res.json(product))
