@@ -14,7 +14,7 @@ const Product = db.define('product', {
     type: Sequelize.DECIMAL,
     allowNull: false
   },
-  quantity: {
+  inventory: {
     type: Sequelize.INTEGER,
     allowNull: false
   },
