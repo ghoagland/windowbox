@@ -12,3 +12,4 @@ const Category = db.define('category', {
     defaultValue: 'https://openclipart.org/download/237408/1452872213.svg'
   }
 })
+module.exports = Category;

@@ -23,3 +23,5 @@ const Product = db.define('product', {
     defaultValue: 'https://openclipart.org/download/237408/1452872213.svg'
   }
 })
+
+module.exports = Product;
