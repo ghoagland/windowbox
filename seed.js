@@ -52,7 +52,7 @@ db.sync({force: true})
 .then(function () {
   console.log('Dropped old data, now adding from seed');
   return Promise.all(categories.map(category => {
-    Category.create({name: category.name, image: category.image, product: category.products}, {include: [Product]})
+    Category.create({name: category.name, image: category.image, products: category.products}, {include: [Product]})
   }))
 })
 .then(() => console.log('Finished seeding!'))
