@@ -13,25 +13,29 @@ router.get('/', (req, res, next) => {
     .then(products => res.json(products))
     .catch(next)
 })
-// DO NOT NEED AN ALL PRODUCTS PAGE (MAYBE WE DO??)
-// router.post('/', (req, res, next) => {
-//   Products.create({res.body})
-//     .then(product => res.json(product))
-//     .catch(next)
-// })
 
-// router.put('/', (req, res, next) => {
-//     Products.
-// })
-
-router.get('/succulents', (req, res, next) => {
+router.get('/:categoryId', (req, res, next) => {
+    const id = req.params.categoryId;
     Products.findAll({
         where: {
-            categoryID: 1 //some ID that matches succulents
+            categoryID: id //some ID that matches succulents
         }
     })
-    .then(succulents => res.json(succulents))
+    .then(category => res.json(category))
     .catch(next)
 })
 
-router.use('/succulents', router)
+router.post('/:categoryId', (req, res, next) => {
+  Products.create(req.body)
+    .then(product => res.json(product))
+    .catch(next)
+})
+
+router.put('/:categoryId/:itemId', (req, res, next) => {
+    const itemId = req.params.itemId;
+    Products.findById(itemId)
+    //update attributes or just update????
+      .updateAttributes(req.body)
+      .then(updatedItem => res.json(updatedItem))
+      .catch(next);
+})
