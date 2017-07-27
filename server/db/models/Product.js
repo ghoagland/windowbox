@@ -24,6 +24,9 @@ const Product = db.define('product', {
   imageUrl: {
     type: Sequelize.STRING,
     defaultValue: 'https://openclipart.org/download/237408/1452872213.svg'
+  },
+  categoryId: {
+    type: Sequelize.INTEGER
   }
 },
 {
