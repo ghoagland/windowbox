@@ -4,15 +4,14 @@ import store, {fetchAllProducts} from '../store'
 
 class AllProducts extends Component {
 
-    componentDidMount(){
+    componentDidMount (){
         const allProductsThunk = fetchAllProducts()
         store.dispatch(allProductsThunk)
     }
 
     render(){
-        return(
+        return (
             <div>
-                {this.props.products}
             </div>
         )
     }
@@ -24,7 +23,5 @@ const mapStateToProps = (state) => {
         products: state.productReducer.products
     }
 }
-
-
 
 export default connect(mapStateToProps)(AllProducts)

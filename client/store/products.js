@@ -24,14 +24,13 @@ const getAllProducts = products => ({ type: GET_ALL_PRODUCTS, products })
  */
 
 export const fetchAllProducts = () => {
-  dispatch => {
-    axios.get('/api/products')
+  return dispatch => {
+    axios.get('/api/product')
       .then(res => {
-        console.log('here')
         dispatch(getAllProducts(res.data || defaultProducts))
 
       })
-      .catch(err => console.log)
+      .catch(err => console.log(err))
 
   }
 }
