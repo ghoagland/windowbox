@@ -1,18 +1,17 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import store, { fetchAllProducts } from '../store'
+import { fetchAllProducts } from '../store'
 
 class AllProducts extends Component {
 
     componentDidMount() {
-        console.log(this.props)
         this.props.loadProducts()
     }
 
     render() {
         if (this.props.products) {
             return (
-            <div>    
+            <div>
                 {this.props.products.map(product => (
                     <div key={product.id} className="row">
 
