@@ -11,8 +11,8 @@ const GET_ALL_PRODUCTS = 'GET_ALL_PRODUCTS'
 /**
  * INITIAL STATE
  */
-const defaultProducts = []
 
+const defaultState = {products: []}
 /**
  * ACTION CREATORS
  */
@@ -27,21 +27,20 @@ export const fetchAllProducts = () => {
   return dispatch => {
     axios.get('/api/product')
       .then(res => {
-        dispatch(getAllProducts(res.data || defaultProducts))
-
+        console.log(res.data)
+        dispatch(getAllProducts(res.data))
       })
       .catch(err => console.log(err))
-
   }
 }
 
 /**
  * REDUCER
  */
-export default function productReducer(state = defaultProducts, action) {
+export default function productReducer (state = defaultState, action) {
   switch (action.type) {
     case GET_ALL_PRODUCTS:
-      return action.products
+      return {...state, products: action.products}
     default:
       return state
   }
