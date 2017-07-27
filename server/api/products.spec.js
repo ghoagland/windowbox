@@ -51,7 +51,7 @@ describe('Individual product routes', () => {
     return db.sync({force: true})
   });
 
-  describe('/api/product/:categoryId/:itemId', () => {
+  describe('/api/product/:productId', () => {
 
     const name = 'Product Name';
     const description = 'Best Plant Ever';
@@ -65,9 +65,9 @@ describe('Individual product routes', () => {
       })
     })
 
-    it('GET /api/product/:categoryId/:itemId', () => {
+    it('GET /api/product/:productId', () => {
       return request(app)
-        .get('/api/product/:categoryId/:itemId')
+        .get('/api/product/:productId')
         .expect(200)
         .then(res => {
           expect(res.body).to.be.an('array')
