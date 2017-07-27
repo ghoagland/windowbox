@@ -14,7 +14,7 @@ class AllProducts extends Component {
             return (
             <div>    
                 {this.props.products.map(product => (
-                    <div className="row">
+                    <div key={product.id} className="row">
 
                         <div className="card">
                             <div className="col-xs-10">
