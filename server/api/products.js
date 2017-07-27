@@ -15,16 +15,32 @@ router.get('/', (req, res, next) => {
         .catch(next)
 })
 
-router.get('/:categoryId/itemId', (req, res, next) => {
+router.get('/:categoryId', (req, res, next) => {
     const id = req.params.categoryId;
     Product.findAll({
         where: {
-            categoryId: id //some ID that matches succulents
+            categoryId: id
         }
     })
         .then(category => res.json(category))
         .catch(next)
 })
+
+router.get('/:categoryId/:itemId', (req, res, next) => {
+    const categoryId = req.params.categoryId;
+    const id = req.params.itemId;
+    Product.findOne({
+        where: {
+            categoryId: categoryId,
+            $and: {
+            id: id}
+        }
+    })
+        .then(category => res.json(category))
+        .catch(next)
+})
+
+
 
 router.post('/:categoryId', (req, res, next) => {
     Product.create(req.body)
