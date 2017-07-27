@@ -11,17 +11,23 @@ const Product = db.define('product', {
     type: Sequelize.TEXT
   },
   price: {
-    type: Sequelize.DECIMAL,
+    type: Sequelize.INTEGER,
     allowNull: false
   },
   inventory: {
     type: Sequelize.INTEGER,
-    allowNull: false
+   allowNull: false,
+    validate: {
+      min: 0
+    }
   },
-  image: {
+  imageUrl: {
     type: Sequelize.STRING,
     defaultValue: 'https://openclipart.org/download/237408/1452872213.svg'
   }
+},
+{
+
 })
 
 module.exports = Product

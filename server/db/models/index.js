@@ -16,7 +16,8 @@ const Category = require('./Category');
  * instead of: const User = require('../db/models/user')
  */
 
-Category.hasMany(Product);
+ Product.belongsToMany(Category, { through: 'ProductCategory' } );
+
 
 module.exports = {
   User,
