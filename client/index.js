@@ -6,7 +6,7 @@ import store from './store'
 import Routes from './Routes'
 
 // establishes socket connection
-import socket from './socket'
+import './socket'
 
 ReactDOM.render(
   <Provider store={store}>
