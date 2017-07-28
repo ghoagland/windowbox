@@ -4,7 +4,8 @@ const db = require('../db')
 const Review = db.define('review', {
   text: {
     type: Sequelize.TEXT,
-    allowNull: false
+    allowNull: false,
+    validate: {len: [10, 700]}
   },
   stars: {
     type: Sequelize.INTEGER,
