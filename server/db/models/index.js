@@ -19,6 +19,9 @@ const Category = require('./Category');
  Product.belongsToMany(Category, { through: 'ProductCategory' } );
  Category.hasMany(Product, { through: 'ProductCategory' });
 
+ User.hasMany(Order);
+ Product.hasMany(Review);
+
 
 module.exports = {
   User,
