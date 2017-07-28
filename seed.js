@@ -11,6 +11,10 @@ const products = [
         image: 'https://maxpull-gdvuch3veo.netdna-ssl.com/wp-content/uploads/2010/01/jade-plants1.jpg',
         price: 9,
         inventory: 100,
+        categoryId: [
+          {id: 1, name: 'Succulents', image: null},
+          {id: 3, name: 'Gift Plants', image: null }
+        ]
       },
       {
         name: 'Prickly Pear',
@@ -18,6 +22,10 @@ const products = [
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Prickly_Pear_Closeup.jpg/220px-Prickly_Pear_Closeup.jpg',
         price: 25,
         inventory: 16,
+        categoryId: [
+          {id: 1, name: 'Succulents', image: null},
+          {id: 3, name: 'Gift Plants', image: null }
+        ]
       },
       {
         name: 'Vanilla Orchid',
@@ -25,6 +33,10 @@ const products = [
         image: 'http://www.tropical-plants-flowers-and-decor.com/images/vanorc.jpg',
         price: 30,
         inventory: 30,
+        categoryId: [
+          {id: 1, name: 'Succulents', image: null},
+          {id: 3, name: 'Gift Plants', image: null }
+        ]
       },
       {
         name: 'Monkey Orchid',
@@ -32,12 +44,16 @@ const products = [
         image: 'https://s-media-cache-ak0.pinimg.com/736x/cc/cf/ec/cccfec02f5f027e0b6e2f4a895e8c304--monkey-orchid-rare-flowers.jpg',
         price: 40,
         inventory: 12,
+        categoryId: [
+          {id: 1, name: 'Succulents', image: null},
+          {id: 3, name: 'Gift Plants', image: null }
+        ]
       }
 ]
 
 const categories = [
   {
-    name: 'Suculents',
+    name: 'Succulents',
     image: null,
   },
   {
@@ -62,7 +78,7 @@ db.sync({force: true})
 .then(function () {
   console.log('Dropped old data, now adding from seed');
   return Promise.all(products.map(product => {
-    Product.create(product, {include: [Category]})
+    Product.create(product, {include: [ Category]})
   }))
 })
 .then(() => console.log('Finished seeding!'))

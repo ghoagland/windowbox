@@ -4,11 +4,12 @@ const db = require('../db')
 const Product = db.define('product', {
   name: {
     type: Sequelize.STRING,
-    unique: true,
+   // unique: true,
     allowNull: false
   },
   description: {
-    type: Sequelize.TEXT
+    type: Sequelize.TEXT,
+    allowNull: false
   },
   price: {
     type: Sequelize.INTEGER,
@@ -16,21 +17,32 @@ const Product = db.define('product', {
   },
   inventory: {
     type: Sequelize.INTEGER,
-   allowNull: false,
+    allowNull: false,
     validate: {
       min: 0
     }
   },
-  imageUrl: {
-    type: Sequelize.STRING,
-    defaultValue: 'https://openclipart.org/download/237408/1452872213.svg'
+  inStock: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: true
   },
-  categoryId: {
-    type: Sequelize.INTEGER
-  }
-},
-{
+  imgUrl: {
+    type: Sequelize.STRING,
+    defaultValue: 'https://openclipart.org/download/237408/1452872213.svg',
+    validate: {
+      isUrl: true
+    }
+  },
 
-})
+},
+  {
+
+  })
 
 module.exports = Product
+
+
+// module.exports.associations = (Product, {CartItem, Review, Order}) => {
+//     //Product.belongsToMany(Order, {through: CartItem})
+//     Product.hasMany(Review)
+// }
