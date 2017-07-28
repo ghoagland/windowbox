@@ -1,19 +1,4 @@
 const {expect} = require('chai')
-<<<<<<< HEAD
-const db = require('../db')
-const User = db.model('user')
-
-describe('User model', () => {
-
-  beforeEach(() => {
-    return db.sync({force: true})
-  });
-
-  describe('instanceMethods', () => {
-
-    describe('correctPassword', () => {
-
-=======
 const db = require('../index')
 const User = db.model('user')
 
@@ -24,7 +9,6 @@ describe('User model', () => {
 
   describe('instanceMethods', () => {
     describe('correctPassword', () => {
->>>>>>> boilermaker/master
       let cody
 
       beforeEach(() => {
@@ -44,14 +28,6 @@ describe('User model', () => {
       it('returns false if the password is incorrect', () => {
         expect(cody.correctPassword('bonez')).to.be.equal(false)
       })
-<<<<<<< HEAD
-
-    }) // end describe('correctPassword')
-
-  }) // end describe('instanceMethods')
-
-=======
     }) // end describe('correctPassword')
   }) // end describe('instanceMethods')
->>>>>>> boilermaker/master
 }) // end describe('User model')
