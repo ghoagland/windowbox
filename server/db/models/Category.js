@@ -7,7 +7,7 @@ const Category = db.define('category', {
     allowNull: false,
     unique: true
   },
-  image: {
+  imageUrl: {
     type: Sequelize.STRING,
     defaultValue: 'https://openclipart.org/download/237408/1452872213.svg'
   }

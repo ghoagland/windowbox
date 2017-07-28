@@ -18,7 +18,7 @@ const Product = db.define('product', {
     type: Sequelize.INTEGER,
     allowNull: false
   },
-  image: {
+  imageUrl: {
     type: Sequelize.STRING,
     defaultValue: 'https://openclipart.org/download/237408/1452872213.svg'
   }

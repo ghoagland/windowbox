@@ -23,11 +23,11 @@ describe('Product routes', () => {
     const description = 'Best Plant Ever';
     const price = 12.99;
     const inventory = 100;
-    const image = 'pretty';
+    const imageUrl = 'pretty';
 
     beforeEach(() => {
       return Product.create({
-        name, description, price, inventory, image
+        name, description, price, inventory, imageUrl
       })
     })
 
