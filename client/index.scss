@@ -3,7 +3,6 @@ body {
 
   a {
     text-decoration: none;
-    color: purple;
   }
 
   label {
@@ -164,6 +163,16 @@ body {
       width: 62%;
     }
   }
+
+
+
+  nav a {
+    display: inline-block;
+    margin: 1em;
+  }
+
+  form div {
+    margin: 1em;
+    display: inline-block;
+  }
 }
-
-

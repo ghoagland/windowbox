@@ -20,8 +20,12 @@ module.exports = app
  * keys as environment variables, so that they can still be read by the
  * Node process on process.env
  */
+<<<<<<< HEAD
 if (process.env.NODE_ENV === 'development') require('../secrets')
 
+=======
+if (process.env.NODE_ENV !== 'production') require('../secrets')
+>>>>>>> boilermaker/master
 
 // passport registration
 passport.serializeUser((user, done) => done(null, user.id))
@@ -66,7 +70,13 @@ const createApp = () => {
     console.error(err.stack)
     res.status(err.status || 500).send(err.message || 'Internal server error.')
   })
+<<<<<<< HEAD
 
+=======
+}
+
+const startListening = () => {
+>>>>>>> boilermaker/master
   // start listening (and create a 'server' object representing our server)
   const server = app.listen(PORT, () => console.log(`Mixing it up on port ${PORT}`))
 
@@ -85,6 +95,12 @@ if (require.main === module) {
   sessionStore.sync()
     .then(syncDb)
     .then(createApp)
+<<<<<<< HEAD
 } else {
   createApp(app)
+=======
+    .then(startListening)
+} else {
+  createApp()
+>>>>>>> boilermaker/master
 }

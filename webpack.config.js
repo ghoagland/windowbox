@@ -26,5 +26,9 @@ module.exports = {
       }
     ]
   }
+<<<<<<< HEAD
 };
 
+=======
+}
+>>>>>>> boilermaker/master
