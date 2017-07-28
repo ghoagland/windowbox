@@ -11,11 +11,15 @@ class SingleProduct extends Component {
   render () {
     const product = this.props.currentProduct;
     return (
-      <div>
-        <img src={product.image} />
-        <h1>{product.name}</h1>
-        <h2>{`$${product.price}`}</h2>
-        <p>{product.description}</p>
+      <div className="product-container">
+        <div className="product-col-1">
+          <img className="product-img" src={product.image} />
+        </div>
+        <div className="product-info product-col-2">
+          <h1>{product.name}</h1>
+          <h2>{`$${product.price}`}</h2>
+          <p>{product.description}</p>
+        </div>
       </div>
     )
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom';
 import { fetchAllProducts } from '../store'
 
 class AllProducts extends Component {
@@ -16,11 +17,13 @@ class AllProducts extends Component {
                     <div key={product.id} className="row">
 
                         <div className="card">
-                            <div className="col-xs-10">
-                                <img src={product.image} alt="Avatar" style={{ width: 100 + '%' }}></img>
-                                <h4><b>{product.name}</b></h4>
-                                <h4><b>{`$${product.price}`}</b></h4>
-                            </div>
+                            <Link to={`/products/${product.id}`}>
+                                <div className="col-xs-10">
+                                    <img src={product.image} alt="Avatar" style={{ width: 100 + '%' }}></img>
+                                    <h4><b>{product.name}</b></h4>
+                                    <h4><b>{`$${product.price}`}</b></h4>
+                                </div>
+                            </Link>
                         </div>
 
                     </div>
