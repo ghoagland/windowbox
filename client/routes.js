@@ -4,18 +4,20 @@ import {Router} from 'react-router'
 import {Route, Switch} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import history from './history'
-import {Main, Login, Signup, UserHome} from './components'
+import {Main, Login, Signup, UserHome, AllProducts, SingleProduct} from './components'
 import {me} from './store'
 
 /**
  * COMPONENT
  */
 class Routes extends Component {
+
   componentDidMount () {
     this.props.loadInitialData()
   }
 
   render () {
+
     const {isLoggedIn} = this.props
 
     return (
@@ -25,12 +27,15 @@ class Routes extends Component {
             {/* Routes placed here are available to all visitors */}
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup} />
+            <Route path="/products/:productId" component={SingleProduct} />
+            <Route path="/products" component={AllProducts} />
+
             {
-              isLoggedIn &&
+              isLoggedIn ?
                 <Switch>
                   {/* Routes placed here are only available after logging in */}
                   <Route path="/home" component={UserHome} />
-                </Switch>
+                </Switch> : null
             }
             {/* Displays our Login component as a fallback */}
             <Route component={Login} />
