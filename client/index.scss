@@ -65,8 +65,9 @@ body {
     font-size: 50px;
   }
 
+
   .nav h1 a{
-    color: darkolivegreen;
+    color: darkturquoise;
     font-size: 50px;
     text-decoration: none;
     text-transform: uppercase;
@@ -82,7 +83,7 @@ body {
     font-size: 50px;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 3px; } 
+    letter-spacing: 3px; }
 
   h2 {
     color: #5e5e5e;
@@ -111,7 +112,7 @@ body {
     padding: 5px;
     border: 1px solid transparent;
     transition: border 2s;
-    
+
     }
 
   ul li a {
@@ -175,4 +176,22 @@ body {
     margin: 1em;
     display: inline-block;
   }
+}
+
+.bigPicture {
+  display: block;
+  height: 500px;
+  text-align: center;
+}
+
+.textBar {
+  display: block;
+  height: 79px;
+  width: 1120px;
+  background-color: mistyrose;
+  text-align: center;
+}
+
+.flex-container-1 {
+  display: flex;
 }

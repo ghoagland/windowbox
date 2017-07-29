@@ -22,12 +22,8 @@ router.get('/', (req, res, next) => {
 })
 
 router.get('/:productId', (req, res, next) => {
-    const id = req.params.productId;
-    Product.findOne({
-        where: {
-            id: id
-        }
-    })
+    const productId = req.params.productId;
+    Product.findById(productId)
         .then(category => res.json(category))
         .catch(next)
 })
