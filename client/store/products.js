@@ -26,7 +26,7 @@ const getCurrentProduct = product => ({type: GET_CURRENT_PRODUCT, currentProduct
 
 export const fetchAllProducts = () => {
   return dispatch => {
-    axios.get('/api/product')
+    axios.get('/api/products')
       .then(res => {
         dispatch(getAllProducts(res.data))
       })
@@ -36,7 +36,7 @@ export const fetchAllProducts = () => {
 
 export const fetchCurrentProduct = (id) => {
   return dispatch => {
-    axios.get(`/api/product/${id}`)
+    axios.get(`/api/products/${id}`)
       .then(res => {
         dispatch(getCurrentProduct(res.data))
       })

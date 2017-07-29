@@ -13,7 +13,7 @@ class SingleProduct extends Component {
     return (
       <div className="product-container">
         <div className="product-col-1">
-          <img className="product-img" src={product.image} />
+          <img className="product-img" src={product.imgUrl} />
         </div>
         <div className="product-info product-col-2">
           <h1>{product.name}</h1>

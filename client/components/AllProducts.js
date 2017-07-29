@@ -19,7 +19,7 @@ class AllProducts extends Component {
                         <div className="card">
                             <Link to={`/products/${product.id}`}>
                                 <div className="col-xs-10">
-                                    <img src={product.image} alt="Avatar" style={{ width: 100 + '%' }}></img>
+                                    <img src={product.imgUrl} alt="Avatar" style={{ width: 100 + '%' }}></img>
                                     <h4><b>{product.name}</b></h4>
                                     <h4><b>{`$${product.price}`}</b></h4>
                                 </div>
