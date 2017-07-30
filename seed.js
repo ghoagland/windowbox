@@ -35,6 +35,27 @@ const products = [
     imgUrl: 'https://s-media-cache-ak0.pinimg.com/736x/cc/cf/ec/cccfec02f5f027e0b6e2f4a895e8c304--monkey-orchid-rare-flowers.jpg',
     price: 40,
     inventory: 12,
+  },
+   {
+    name: 'Dahlia Bunch',
+    description: 'Dahlias are considered one of the most spectacular garden flowers. There is a great variety of form in dahlias, from the showy dinner-plate size to the bright, little single ones.',
+    imgUrl: 'http://s7d1.scene7.com/is/image/terrain/43659895_000_a?$zoom2$',
+    price: 45,
+    inventory: 25,
+  },
+  {
+    name: 'Succulent Triangle Planter',
+    description: 'An exclusive collection of living, tender succulents fills this reclaimed wood planter with a contemporary, geometric shape. Each low-maintenance planting of mixed succulents is surrounded by woodland moss.',
+    imgUrl: 'http://s7d1.scene7.com/is/image/terrain/43596873_040_a?$zoom2$',
+    price: 65,
+    inventory: 35,
+  },
+    {
+    name: 'Barnacle Crosshatch bowl',
+    description: 'A fantastic addition to your garden, each of these weathered planters features a distinct maritime texture. An antiqued glaze will continue to change over time, adding to the pot`/s character and authenticity, while high-fired earthenware offers durability, strength, and resistance to frost.',
+    imgUrl: 'http://s7d1.scene7.com/is/image/terrain/37230224_012_a?$zoom2$',
+    price: 65,
+    inventory: 35,
   }
 ]
 
@@ -89,6 +110,22 @@ const productCategories = [
   {
     productId: 4,
     categoryId: 2
+  },
+  {
+    productId: 5,
+    categoryId: 3
+  },
+  {
+    productId: 6,
+    categoryId: 1
+  },
+   {
+    productId: 6,
+    categoryId: 3
+  },
+  {
+    productId: 7,
+    categoryId: 3
   }
 ]
 

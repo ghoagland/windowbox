@@ -185,13 +185,23 @@ body {
 }
 
 .textBar {
-  display: block;
+  display: flex;
   height: 79px;
-  width: 1120px;
   background-color: mistyrose;
-  text-align: center;
+  margin-left: 28px;
+  margin-right: 28px;
+  font-style: italic;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.textTextBar {
+  color: white;
+  font-size: 35px;
 }
 
 .flex-container-1 {
   display: flex;
+  justify-content: center;
 }
