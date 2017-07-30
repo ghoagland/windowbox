@@ -56,6 +56,13 @@ const products = [
     imgUrl: 'http://s7d1.scene7.com/is/image/terrain/37230224_012_a?$zoom2$',
     price: 65,
     inventory: 35,
+  },
+      {
+    name: 'White Hydrangea',
+    description: 'Topped with pure white blooms, this elegant hydrangea arrives ready for display in a dotted metal pot topped with moss.',
+    imgUrl: 'http://s7d1.scene7.com/is/image/terrain/42446963_010_a?$zoom2$',
+    price: 45,
+    inventory: 25,
   }
 ]
 
@@ -125,6 +132,10 @@ const productCategories = [
   },
   {
     productId: 7,
+    categoryId: 3
+  },
+  {
+    productId: 8,
     categoryId: 3
   }
 ]

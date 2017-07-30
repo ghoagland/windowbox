@@ -185,8 +185,8 @@ body {
   display: flex;
   height: 79px;
   background-color: mistyrose;
-  margin-left: 28px;
-  margin-right: 28px;
+  margin-left: 57px;
+  margin-right: 57px;
   font-style: italic;
   align-items: center;
   justify-content: center;
@@ -194,16 +194,23 @@ body {
 }
 
 .textTextBar {
-  color: white;
+  color: black;
   font-size: 35px;
 }
 
 .flex-container-1 {
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
+
 .products {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+.flex-container-2 {
+  display: flex;
+  justify-content: center;
 }

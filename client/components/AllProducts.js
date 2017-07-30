@@ -20,8 +20,8 @@ class AllProducts extends Component {
                             <Link to={`/products/${product.id}`}>
                                 <div className="col-xs-10">
                                     <img src={product.imgUrl} alt="Avatar" style={{ width: 90 + '%' }}></img>
-                                    <h4><b>{product.name}</b></h4>
-                                    <h4><b>{`$${product.price}`}</b></h4>
+                                    <h3><b>{product.name}</b></h3>
+                                    <h3><b>{`$${product.price}`}</b></h3>
                                 </div>
                             </Link>
                         </div>
