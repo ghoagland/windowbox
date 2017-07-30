@@ -16,13 +16,10 @@ body {
 
   .card {
       position: static;
-      display:flex;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       height: 400px;
       width: 350px;
       transition: 0.3s;
-      padding-left: 15px;
-      padding-right: 15px;
       padding-top: 10px;
       border: 10px;
       margin: 20px;
@@ -204,4 +201,9 @@ body {
 .flex-container-1 {
   display: flex;
   justify-content: center;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }

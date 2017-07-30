@@ -12,14 +12,14 @@ class AllProducts extends Component {
     render() {
         if (this.props.products) {
             return (
-            <div>
+            <div className="products" >
                 {this.props.products.map(product => (
                     <div key={product.id} className="row">
 
                         <div className="card">
                             <Link to={`/products/${product.id}`}>
                                 <div className="col-xs-10">
-                                    <img src={product.imgUrl} alt="Avatar" style={{ width: 100 + '%' }}></img>
+                                    <img src={product.imgUrl} alt="Avatar" style={{ width: 90 + '%' }}></img>
                                     <h4><b>{product.name}</b></h4>
                                     <h4><b>{`$${product.price}`}</b></h4>
                                 </div>
