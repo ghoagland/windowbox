@@ -16,13 +16,10 @@ body {
 
   .card {
       position: static;
-      display:flex;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       height: 400px;
       width: 350px;
       transition: 0.3s;
-      padding-left: 15px;
-      padding-right: 15px;
       padding-top: 10px;
       border: 10px;
       margin: 20px;
@@ -65,8 +62,9 @@ body {
     font-size: 50px;
   }
 
+
   .nav h1 a{
-    color: darkolivegreen;
+    color: darkturquoise;
     font-size: 50px;
     text-decoration: none;
     text-transform: uppercase;
@@ -82,7 +80,7 @@ body {
     font-size: 50px;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 3px; } 
+    letter-spacing: 3px; }
 
   h2 {
     color: #5e5e5e;
@@ -111,7 +109,7 @@ body {
     padding: 5px;
     border: 1px solid transparent;
     transition: border 2s;
-    
+
     }
 
   ul li a {
@@ -175,4 +173,44 @@ body {
     margin: 1em;
     display: inline-block;
   }
+}
+
+.bigPicture {
+  display: block;
+  height: 500px;
+  text-align: center;
+}
+
+.textBar {
+  display: flex;
+  height: 79px;
+  background-color: mistyrose;
+  margin-left: 57px;
+  margin-right: 57px;
+  font-style: italic;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.textTextBar {
+  color: black;
+  font-size: 35px;
+}
+
+.flex-container-1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-container-2 {
+  display: flex;
+  justify-content: center;
 }
