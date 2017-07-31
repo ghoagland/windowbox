@@ -5,7 +5,7 @@ const ProductCategory = db.define('productCategory', {
   productId: {
     type: Sequelize.INTEGER,
     allowNull: false,
-    unique: true
+    // unique: true
   },
   categoryId: {
     type: Sequelize.INTEGER,
