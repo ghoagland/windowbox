@@ -6,7 +6,7 @@ export default function Homepage() {
   return (
     <div>
       <div className="bigPicture" >
-        <img src="/homepageImages/banner.jpg" />
+        <img src="/homepageImages/banner2.jpeg" />
       </div>
       <div className="textBar" >
         <div className="textTextBar" >
