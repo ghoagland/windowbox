@@ -5,7 +5,7 @@ import userReducer from './user'
 import productReducer from './products'
 import cartReducer from './cart'
 
-const reducer = combineReducers({userReducer, productReducer, cartReducer})
+const reducer = combineReducers({userReducer, productReducer, cartReducer}) // might want to rename these properties to make it more clear, ex. user, product, cart
 const middleware = applyMiddleware(thunkMiddleware, createLogger({collapsed: true}))
 const store = createStore(reducer, middleware);
 

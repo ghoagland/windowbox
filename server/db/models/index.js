@@ -34,3 +34,11 @@ module.exports = {
   Review,
   ProductCategory
 }
+
+// GOALS
+// - [X] finished added to cart
+// - [ ] finish deploying -- secrets
+// - [ ] work on checkout, order models & associations
+//     - [ ]Add to cart functionality: .findOrCreate
+// - [ ] update quantity in cart view
+// - [ ] unauthenticated user cart persistence, check if there is a loggedin user id or session id in the db

@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addToCart, removeFromCart, emptyCart } from '../store';
 
+// update item quantity, remove item functionality
+// implement remote item and clear cart functionality, update
+
 class Cart extends Component {
   render() {
     const cart = this.props.inCart;
