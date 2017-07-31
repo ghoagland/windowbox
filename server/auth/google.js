@@ -3,7 +3,6 @@ const router = require('express').Router()
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy
 const {User} = require('../db/models')
 module.exports = router
-const secrets = require('../../secrets') (); //for dev only
 
 /**
  * For OAuth keys and other secrets, your Node process will search
