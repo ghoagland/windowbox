@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import {connect} from 'react-redux'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { addToCart, removeFromCart, emptyCart } from '../store';
 
 class Cart extends Component {
@@ -29,13 +29,25 @@ class Cart extends Component {
                   </tr>
                 )
               })}
-              </tbody>
+            </tbody>
           </table>
+          <hr></hr>
+          <p>{`Total: $${findTotal(cart)}`}</p>
         </div>
       </div>
     )
   }
 
+}
+
+function findTotal(array) {
+  return array.reduce((sum, elem) => {
+    const price = +elem.item.price;
+    const quantity = +elem.quantity;
+    return (
+      sum + (price * quantity)
+    )
+  }, 0)
 }
 
 const mapState = (state) => {

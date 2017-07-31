@@ -13,8 +13,8 @@ const EMPTY_CART = 'EMPTY_CART';
 
 //ACTION CREATORS
 
-export const addToCart = (item, quantity = 1) => ({type: ADD_TO_CART, item, quantity});
-export const removeFromCart = (id, quantity = 1) => ({type: REMOVE_FROM_CART, id, quantity});
+export const addToCart = (item, quantity = 1) => ({type: ADD_TO_CART, item, quantity: +quantity });
+export const removeFromCart = (id, quantity = 1) => ({type: REMOVE_FROM_CART, id, quantity: +quantity});
 
 export const emptyCart = () => ({type: EMPTY_CART});
 
