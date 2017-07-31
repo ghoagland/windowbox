@@ -13,12 +13,14 @@ class ProductReviews extends Component {
     const productReviews = this.props.currentReviews
     return (
       <div>
-        <ul>
+        <h3>Reviews</h3>
+        <ol className='reviews'>
           {
             productReviews && productReviews.map(review =>
-              <li key={review.id}>{review.text}</li>)
+              <li key={review.id}>{review.stars
+                  } stars: {review.text} </li>)
           }
-        </ul>
+        </ol>
       </div>
     )
   }
