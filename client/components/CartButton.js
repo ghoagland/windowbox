@@ -11,7 +11,6 @@ export class CartButton extends Component {
     }
 
     render(){
-        console.log(this.props, 'props');
         var arr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
 
         return (
