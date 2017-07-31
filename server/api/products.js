@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const Product = require('../db/models/Product')
 const Category = require('../db/models/Category')
+const Review = require('../db/models/Review')
 module.exports = router
 
 router.get('/', (req, res, next) => {
@@ -43,12 +44,22 @@ router.put('/:productId', (req, res, next) => {
 })
 
 router.delete('/:productId', (req, res, next) => {
-    const id = req.params.productId
+    const productId = req.params.productId
     Product.destroy({
         where: {
-            id: id
+            id: productId
         }
     })
         .then(item => res.json(item))
+        .catch(next)
+})
+router.get('/:productId/reviews', (req, res, next) => {
+    const id = req.params.productId
+    Review.findAll({
+        where: {
+            productId: id
+        }
+    })
+        .then(reviews => res.json(reviews))
         .catch(next)
 })

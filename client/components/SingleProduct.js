@@ -1,16 +1,19 @@
-import React, {Component} from 'react'
-import {connect} from 'react-redux'
-import {fetchCurrentProduct} from '../store'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { fetchCurrentProduct } from '../store'
+import SingleProductReviews from './SingleProductReviews'
+
 import CartButton from './CartButton'
 
 class SingleProduct extends Component {
-  componentDidMount() {
+  componentDidMount () {
     const currentId = +this.props.match.params.productId
     this.props.loadSingleProduct(currentId)
   }
 
   render () {
-    const product = this.props.currentProduct;
+    const product = this.props.currentProduct
+    const currentId = +this.props.match.params.productId
     return (
       <div className="product-container">
         <div className="product-col-1">
@@ -20,7 +23,8 @@ class SingleProduct extends Component {
           <h1>{product.name}</h1>
           <h2>{`$${product.price}`}</h2>
           <p>{product.description}</p>
-          <CartButton currentProduct={product} />
+          <CartButton />
+          <SingleProductReviews id={currentId}/>
         </div>
       </div>
     )
@@ -33,10 +37,10 @@ const mapState = state => {
     currentProduct: state.productReducer.currentProduct
   }
 }
-
 const mapDispatch = dispatch => {
   return {
-    loadSingleProduct(id) {
+
+    loadSingleProduct: (id) => {
       dispatch(fetchCurrentProduct(id))
     }
   }
