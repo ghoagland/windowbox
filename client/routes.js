@@ -4,7 +4,7 @@ import {Router} from 'react-router'
 import {Route, Switch} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import history from './history'
-import {Main, Login, Signup, UserHome, AllProducts, SingleProduct, Homepage } from './components'
+import {Main, Login, Signup, UserHome, AllProducts, SingleProduct, Homepage, Cart } from './components'
 import {me} from './store'
 
 /**
@@ -30,6 +30,7 @@ class Routes extends Component {
             <Route path="/signup" component={Signup} />
             <Route path="/products/:productId" component={SingleProduct} />
             <Route path="/products" component={AllProducts} />
+            <Route path="/cart" component={Cart} />
 
             {
               isLoggedIn ?
@@ -54,7 +55,7 @@ const mapState = (state) => {
   return {
     // Being 'logged in' for our purposes will be defined has having a state.user that has a truthy id.
     // Otherwise, state.user will be an empty object, and state.user.id will be falsey
-    isLoggedIn: !!state.user.id
+    isLoggedIn: !!state.userReducer.id
   }
 }
 
