@@ -185,7 +185,7 @@ const products = [
   },
   {
     name: 'Meyer Lemon Tree',
-    description: 'This tree is very heavy-bearing and will provide you with a larger number of lemons every year. Plus, it is self-pollinating, so you can grow fruit indoors or out. Your new Meyer Lemon tree fruits abundantly in winter.', 
+    description: 'This tree is very heavy-bearing and will provide you with a larger number of lemons every year. Plus, it is self-pollinating, so you can grow fruit indoors or out. Your new Meyer Lemon tree fruits abundantly in winter.',
     imgUrl: 'https://www.brighterblooms.com/images/D.cache.dpthmbn/1334.jpg',
     price: 35,
     inventory: 60
@@ -335,7 +335,7 @@ const productCategories = [
     productId: 10,
     categoryId: 7
   }
-  
+
 ]
 
 const reviews = [
@@ -470,7 +470,7 @@ const users = [
     email: 'egrey@tea.com',
     password: 'earlspw',
     salt: 'nosaltintea',
-    googleId: '2425' 
+    googleId: '2425'
   },
   {
     name: 'Olivia Omelette',
