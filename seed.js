@@ -6,6 +6,8 @@ const Category = models.Category;
 const ProductCategory = models.ProductCategory;
 const Review = models.Review;
 const User = models.User;
+const Order = models.Order;
+const OrderProduct = models.OrderProduct;
 
 const products = [
   {
@@ -481,6 +483,63 @@ const users = [
   }
 ];
 
+const orders = [
+  {
+    status: 'Created',
+    subtotal: 14.99,
+    sessionId: '1wu9120noihd1'
+  },
+  {
+    status: 'Created',
+    subtotal: 123.00,
+    sessionId: 'jqwojqwjoqw920'
+  },
+  {
+    status: 'Processing',
+    subtotal: 69.95,
+    sessionId: '8r228hweue389e',
+
+  },
+  {
+    status: 'Completed',
+    subtotal: 12756.00,
+    sessionId: 'djioedjwejiodkm'
+  },
+]
+
+const orderProducts =[
+  {
+    orderId: 1,
+    productId: 1,
+    price: 12.00,
+    quantity: 3
+  },
+  {
+    orderId: 1,
+    productId: 2,
+    price: 56.00,
+    quantity: 7
+  },
+  {
+    orderId: 2,
+    productId: 1,
+    price: 1.00,
+    quantity: 1000
+  },
+  {
+    orderId: 3,
+    productId: 3,
+    price: 7.00,
+    quantity: 76
+  },
+  {
+    orderId: 3,
+    productId: 1,
+    price: 123455.00,
+    quantity: 1
+  }
+]
+
 
 db.sync({ force: true })
 
@@ -500,6 +559,8 @@ db.sync({ force: true })
     .then(function () {
     return Promise.all(reviews.map(review => Review.create(review)))
   })
+  .then(() => Promise.all(orders.map(order => Order.create(order))))
+  .then(() => Promise.all(orderProducts.map(orderProduct => OrderProduct.create(orderProduct))))
   .then(() => console.log('Finished seeding!'))
   .catch(err => console.error('There was a problem seeding.', err, err.stack));
 
