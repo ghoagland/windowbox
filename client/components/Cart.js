@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom';
 import { addToCart, removeFromCart, emptyCart } from '../store';
 
 class Cart extends Component {
@@ -33,6 +34,7 @@ class Cart extends Component {
           </table>
           <hr></hr>
           <p>{`Total: $${findTotal(cart)}`}</p>
+          <Link to='/checkout'><button>Checkout</button></Link>
         </div>
       </div>
     )
