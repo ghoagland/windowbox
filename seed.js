@@ -284,59 +284,6 @@ const categories = [
   }
 ]
 
-// const productCategories = [
-//   {
-//     productId: 1,
-//     categoryId: 1
-//   },
-//   {
-//     productId: 2,
-//     categoryId: 1
-//   },
-//   {
-//     productId: 3,
-//     categoryId: 2
-//   },
-//   {
-//     productId: 4,
-//     categoryId: 2
-//   },
-//   {
-//     productId: 5,
-//     categoryId: 2
-//   },
-//   {
-//     productId: 6,
-//     categoryId: 7
-//   },
-//   {
-//     productId: 7,
-//     categoryId: 7
-//   },
-//   {
-//     productId: 6,
-//     categoryId: 3
-//   },
-//    {
-//     productId: 7,
-//     categoryId: 3
-//   },
-//   {
-//     productId: 7,
-//     categoryId: 4
-//   },
-//   {
-//     productId: 8,
-//     categoryId: 7
-//   },{
-//     productId: 9,
-//     categoryId: 7
-//   },{
-//     productId: 10,
-//     categoryId: 7
-//   }
-
-// ]
 const productCategories = [
   {
     productId: 1,
@@ -348,68 +295,49 @@ const productCategories = [
   },
   {
     productId: 3,
-    categoryId: 4
+    categoryId: 2
   },
   {
-    productId: 3,
+    productId: 4,
+    categoryId: 2
+  },
+  {
+    productId: 5,
+    categoryId: 2
+  },
+  {
+    productId: 6,
     categoryId: 7
   },
   {
-    productId: 3,
-    categoryId: 5
-  },
-  {
-    productId: 4,
-    categoryId: 4
-  },
-  {
-    productId: 4,
+    productId: 7,
     categoryId: 7
   },
   {
-    productId: 4,
-    categoryId: 5
+    productId: 6,
+    categoryId: 3
   },
    {
-    productId: 5,
-    categoryId: 5
+    productId: 7,
+    categoryId: 3
   },
   {
-    productId: 5,
-    categoryId: 7
-  },
-  {
-    productId: 5,
+    productId: 7,
     categoryId: 4
+  },
+  {
+    productId: 8,
+    categoryId: 7
   },{
-    productId: 6,
-    categoryId: 5
+    productId: 9,
+    categoryId: 7
   },{
-    productId: 6,
+    productId: 10,
     categoryId: 7
-  },
-  {
-    productId: 7,
-    categoryId: 7
-  },
-  {
-    productId: 7,
-    categoryId: 5
-  },
-  {
-    productId: 8,
-    categoryId: 6
-  },
-  {
-    productId: 8,
-    categoryId: 7
-  },
-  {
-    productId: 8,
-    categoryId: 5
   }
 
 ]
+
 const reviews = [
   {
     text: 'great plant!',
