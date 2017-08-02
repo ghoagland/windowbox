@@ -487,27 +487,47 @@ const orders = [
   {
     status: 'Created',
     subtotal: 14.99,
-    sessionId: '1wu9120noihd1'
+    sessionId: '1wu9120noihd1',
+    street: '22212 djwk Ave',
+    city: 'New York',
+    state: 'NY',
+    zipcode: '10028',
+    email: 'whatevs@whatevs.com'
+
   },
   {
     status: 'Created',
     subtotal: 123.00,
-    sessionId: 'jqwojqwjoqw920'
+    sessionId: 'jqwojqwjoqw920',
+    street: '123 Fake St',
+    city: 'FakeTown',
+    state: 'MA',
+    zipcode: '12481',
+    email: 'fake@fake.com'
   },
   {
     status: 'Processing',
     subtotal: 69.95,
     sessionId: '8r228hweue389e',
-
+    street: '21 Wellesley College Rd',
+    city: 'Wellesley',
+    state: 'MA',
+    zipcode: '12482',
+    email: 'hi@hi.com'
   },
   {
     status: 'Completed',
     subtotal: 12756.00,
-    sessionId: 'djioedjwejiodkm'
+    sessionId: 'djioedjwejiodkm',
+    street: '1234 Main Circle',
+    city: 'Boston',
+    state: 'MA',
+    zipcode: '02474',
+    email: 'seed@seed.com'
   },
 ]
 
-const orderProducts =[
+const orderProducts = [
   {
     orderId: 1,
     productId: 1,

@@ -12,6 +12,24 @@ const Order = db.define('order', {
     },
     sessionId: {
       type: Sequelize.STRING,
+    },
+    street: {
+      type: Sequelize.STRING
+    },
+    city: {
+      type: Sequelize.STRING
+    },
+    state: {
+      type: Sequelize.STRING
+    },
+    zipcode: {
+      type: Sequelize.STRING
+    },
+    email: {
+      type: Sequelize.STRING,
+      validate: {
+        isEmail: true
+      }
     }
 }, {
   validate: {
