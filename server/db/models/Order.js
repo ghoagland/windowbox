@@ -4,11 +4,13 @@ const db = require('../db')
 const Order = db.define('order', {
     status: {
         type: Sequelize.ENUM('Created', 'Processing', 'Cancelled', 'Completed'),
-        allowNull: false
+        allowNull: false,
+        defaultValue: 'Created'
     },
     subtotal: {
       type: Sequelize.DECIMAL(10, 2),
-      allowNull: false
+      allowNull: false,
+      defaultValue: 0
     },
     sessionId: {
       type: Sequelize.STRING,
