@@ -40,26 +40,6 @@ describe('Product routes', () => {
           expect(res.body[0].name).to.be.equal('Product Name')
         })
     })
-
-
-    // it('POST one', function (done) {
-    //   return request(app)
-    //     .post('/api/product')
-    //     .send({
-    //       name: 'Boring plant',
-    //       description: 'This plant is boring',
-    //       price: 12.00,
-    //       inventory: 3,
-    //       image: 'nice'
-    //     })
-    //     .expect(201)
-    //     .end(function (err, res) {
-    //       if (err) return done(err);
-    //       expect(res.body.name).to.equal('Boring plant')
-    //       expect(res.body.id).to.exist
-    //     });
-    // });
-
   })
 
 })
