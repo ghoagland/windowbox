@@ -26,18 +26,20 @@ const Main = (props) => {
                {/* The navbar will show these links after you log in */}
               <ul className="nav-links">
                 <li><Link to="/products">PRODUCTS</Link></li>
-                <a href="#" onClick={handleClick}>Logout</a>
+                <li><a href="#" onClick={handleClick}>Logout</a></li>
+                <li><Link to="/cart">Cart</Link></li>
               </ul>
             </div> :
 
             <div className="nav">
               <h1><Link to='/'>WINDOWBOX</Link></h1>
                {/* The navbar will show these links before you log in */}
-              <ul className="nav-links">
+              <ul className="nav-links dropdown">
                 <li><Link to="/products">PRODUCTS</Link></li>
                 <li><Link to="/login">Login</Link></li>
                 <li><Link to="/signup">Sign Up</Link></li>
                 <li><Link to="/cart">Cart</Link></li>
+                
               </ul>
             </div>
         }
